@@ -1,0 +1,1 @@
+# hyrule-compendium2.0
