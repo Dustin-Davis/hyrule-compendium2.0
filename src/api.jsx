@@ -1,31 +1,27 @@
 import React, { useEffect, useState } from "react";
-
+import axios from "axios";
+import Test from "./test";
 
 function GetEquipment() {
   const [items, setItems] = useState();
 
-  // Note: the empty deps array [] means
-  // this useEffect will run once
-  // similar to componentDidMount()
   useEffect(() => {
-    fetch('https://botw-compendium.herokuapp.com/api/v2/all')
-      .then(res => res.json())
-      .then(console.log(res.json()))
-      .then(
-        (result) => {
-          setItems(result);
-          console.log(result)
-        }
-      )
-  }, [])
-  console.log(items)
-  return (
-    <div>
-      <h2>items.name</h2>
-    </div>
-  )
+    fetchItems();
+  }, []);
+
+
+  const fetchItems = () => {
+      axios.get(`https://botw-compendium.herokuapp.com/api/v2/category/equipment`)
+        .then((response) => response.json())
+        .then((res) => {
+          setItems(res.data.equipment)
+        })
+  }
+return  (
+  <Test items={items} />
+)
 }
 
 
 
-export default GetEquipment ;
+export default GetEquipment;
