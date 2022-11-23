@@ -1,17 +1,6 @@
 import { useState, useEffect } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
-import axios from "axios";
-
-
-
-const fetchItems = () => {
- return axios.get(`https://botw-compendium.herokuapp.com/api/v2/category/equipment`)
-    .then(({data}) => {
-      console.log(data)
-      return JSON.stringify(data)
-    })
-}
 
 
 function App() {
