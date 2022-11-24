@@ -33,7 +33,7 @@ function App() {
         </button>
         {
           items.map((item, idx) => (
-          <p>
+            <p key={item.id}>
             {item.name}
           </p>
         ))
