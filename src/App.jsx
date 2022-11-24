@@ -1,7 +1,19 @@
 import { useState, useEffect } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
+<<<<<<< HEAD
+import axios from "axios";
 
+
+const fetchItems = () => {
+ return axios.get(`https://botw-compendium.herokuapp.com/api/v2/category/equipment`)
+    .then(({ data }) => {
+      console.log(data)
+      return data
+    })
+}
+=======
+>>>>>>> main
 
 function App() {
   const [count, setCount] = useState(0)
@@ -10,7 +22,8 @@ function App() {
 
   useEffect(() => {
     fetchItems().then((equipment) => {
-      setItemData(equipment || 'No items')
+      setItemData(JSON.stringify(equipment) || 'No items')
+      setItems(equipment.data)
     })
   }, [])
 
@@ -21,13 +34,14 @@ function App() {
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
-        <button onClick={() => {
-          fetchItems()
-        }}> call
-        </button>
-        <p>
-          {itemData}
-        </p>
+        {
+          items.sort((a, b) => a.id - b.id)
+          .map((item, idx) => (
+            <p key={item.id}>
+            {item.name}
+          </p>
+        ))
+      }
       </div>
 
     </div>
