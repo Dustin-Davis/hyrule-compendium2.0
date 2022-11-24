@@ -4,15 +4,13 @@ import './App.css'
 import axios from "axios";
 
 
-
 const fetchItems = () => {
  return axios.get(`https://botw-compendium.herokuapp.com/api/v2/category/equipment`)
-    .then(({data}) => {
+    .then(({ data }) => {
       console.log(data)
-      return JSON.stringify(data)
+      return data
     })
 }
-
 
 function App() {
   const [count, setCount] = useState(0)
@@ -21,7 +19,8 @@ function App() {
 
   useEffect(() => {
     fetchItems().then((equipment) => {
-      setItemData(equipment || 'No items')
+      setItemData(JSON.stringify(equipment) || 'No items')
+      setItems(equipment.data)
     })
   }, [])
 
@@ -32,13 +31,13 @@ function App() {
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
-        <button onClick={() => {
-          fetchItems()
-        }}> call
-        </button>
-        <p>
-          {itemData}
-        </p>
+        {
+          items.map((item, idx) => (
+          <p>
+            {item.name}
+          </p>
+        ))
+      }
       </div>
 
     </div>
