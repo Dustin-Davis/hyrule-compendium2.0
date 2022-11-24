@@ -1,9 +1,7 @@
 import { useState, useEffect } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
-<<<<<<< HEAD
 import axios from "axios";
-
 
 const fetchItems = () => {
  return axios.get(`https://botw-compendium.herokuapp.com/api/v2/category/equipment`)
@@ -12,8 +10,8 @@ const fetchItems = () => {
       return data
     })
 }
-=======
->>>>>>> main
+
+  //I want to test to see if i can commit
 
 function App() {
   const [count, setCount] = useState(0)
