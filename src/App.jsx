@@ -32,7 +32,8 @@ function App() {
           count is {count}
         </button>
         {
-          items.map((item, idx) => (
+          items.sort((a, b) => a.id - b.id)
+          .map((item, idx) => (
             <p key={item.id}>
             {item.name}
           </p>
