@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
+<<<<<<< HEAD
 import axios from "axios";
 
 
@@ -11,6 +12,8 @@ const fetchItems = () => {
       return data
     })
 }
+=======
+>>>>>>> main
 
 function App() {
   const [count, setCount] = useState(0)
