@@ -27,6 +27,7 @@ function App() {
             <p >
             {item.name}
           </p>
+              <img src={item.image} alt=""></img>
             </div>
           ))
         }
