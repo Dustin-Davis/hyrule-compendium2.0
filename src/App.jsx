@@ -8,7 +8,7 @@ import {fetchItems} from './api.jsx'
 function App() {
   const [items, setItems] = useState([])
   // const [itemData, setItemData] = useState('')
-let num = 10
+  let num = 10
 
 
   useEffect(() => {
