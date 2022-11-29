@@ -10,3 +10,16 @@ export const fetchItems = () => {
       return data
     })
 }
+// function Items() {
+//   const [items, setItems] = useState([])
+//   // const [itemData, setItemData] = useState('')
+
+
+//   useEffect(() => {
+//     fetchItems().then((equipment) => {
+//       // setItemData(JSON.stringify(equipment) || 'No items')
+//       setItems(equipment.data)
+//     })
+//   }, [])
+
+// }

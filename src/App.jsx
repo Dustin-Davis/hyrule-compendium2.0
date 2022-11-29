@@ -7,7 +7,9 @@ import {fetchItems} from './api.jsx'
 
 function App() {
   const [items, setItems] = useState([])
-  const [itemData, setItemData] = useState('')
+  // const [itemData, setItemData] = useState('')
+let num = 10
+
 
   useEffect(() => {
     fetchItems().then((equipment) => {
@@ -22,14 +24,14 @@ function App() {
       <div className="card">
         {
           items.sort((a, b) => a.id - b.id)
-          .map((item, idx) => (
-            <div key={item.id}>
-            <p >
-            {item.name}
-          </p>
-              <img src={item.image} alt=""></img>
-            </div>
-          ))
+            .map((item, idx) => idx < num && (
+              <div key={item.id}>
+                <p >
+                  {item.name}
+                </p>
+                <img src={item.image} alt=""></img>
+              </div>
+            ))
         }
       </div>
     </div>
