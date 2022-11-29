@@ -3,7 +3,7 @@ import axios from "axios";
 
 
 
-const fetchItems = () => {
+const fetchEquipment = () => {
   return axios.get(`https://botw-compendium.herokuapp.com/api/v2/category/equipment`)
     .then(({ data }) => {
       console.log(data)
@@ -15,7 +15,7 @@ function useEquipment() {
   const [items, setItems] = useState([])
 
   useEffect(() => {
-    fetchItems().then((equipment) => {
+    fetchEquipment().then((equipment) => {
       setItems(equipment.data)
     })
   }, [])
