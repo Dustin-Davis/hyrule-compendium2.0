@@ -3,23 +3,24 @@ import axios from "axios";
 
 
 
-export const fetchItems = () => {
+const fetchItems = () => {
   return axios.get(`https://botw-compendium.herokuapp.com/api/v2/category/equipment`)
     .then(({ data }) => {
       console.log(data)
       return data
     })
 }
-// function Items() {
-//   const [items, setItems] = useState([])
-//   // const [itemData, setItemData] = useState('')
 
+function useEquipment() {
+  const [items, setItems] = useState([])
 
-//   useEffect(() => {
-//     fetchItems().then((equipment) => {
-//       // setItemData(JSON.stringify(equipment) || 'No items')
-//       setItems(equipment.data)
-//     })
-//   }, [])
+  useEffect(() => {
+    fetchItems().then((equipment) => {
+      setItems(equipment.data)
+    })
+  }, [])
 
-// }
+  return items
+}
+
+export {useEquipment}
