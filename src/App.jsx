@@ -3,11 +3,11 @@ import reactLogo from './assets/react.svg'
 import './App.css'
 import axios from "axios";
 import  {useEquipment}  from './api.jsx'
-
+import EquipmentCard from './equipment-card/EquipmentCard.jsx'
 
 function App() {
   const equipment = useEquipment()
-  let num = 10
+  let num = 1
 
   return (
     <div className="App">
@@ -25,6 +25,7 @@ function App() {
             ))
         }
       </div>
+      <EquipmentCard />
     </div>
   )
 }
