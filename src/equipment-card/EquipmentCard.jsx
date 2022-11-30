@@ -18,15 +18,10 @@ export default function EquipmentCard() {
               <div className="flip-card" tabIndex="0">
                 <div className="flip-card-inner">
                   <div className="flip-card-front">
-
                     <img src={item.image} alt=""></img>
                   </div>
                   <div className="flip-card-back">
-
-                    <p>{item.id}</p>
-                    <p >
-                      {item.name}
-                    </p>
+                    <p>{item.name.replace(/(^\w{1})|(\s+\w{1})/g, letter => letter.toUpperCase())}</p>
                   </div>
                 </div>
               </div>
