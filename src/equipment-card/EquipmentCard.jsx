@@ -23,6 +23,8 @@ export default function EquipmentCard() {
                   <div className="flip-card-back">
                     <p>{item.name.replace(/(^\w{1})|(\s+\w{1})/g, letter => letter.toUpperCase())}</p>
                     <p>{item.description}</p>
+                    <p>Attack: {item.attack}</p>
+                    <p>Defense: {item.defense}</p>
                   </div>
                 </div>
               </div>
