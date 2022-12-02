@@ -7,14 +7,15 @@ import { useEquipment } from '../api.jsx'
 
 export default function EquipmentCard() {
   const equipment = useEquipment()
-  let num = 1
+  let num = 16
 
   return (
-    <div>
+    <div className="container">
+      <div className="row">
       {
         equipment.sort((a, b) => a.id - b.id)
-          .map((item, idx) => idx < num && (
-            <div key={item.id}>
+        .map((item, idx) => idx < num && (
+          <div key={item.id} className="column">
               <div className="flip-card" tabIndex="0">
                 <div className="flip-card-inner">
                   <div className="flip-card-front">
@@ -28,9 +29,10 @@ export default function EquipmentCard() {
                   </div>
                 </div>
               </div>
-            </div>
+          </div>
           ))
-      }
-    </div>
+        }
+      </div>
+  </div>
   )
 }
