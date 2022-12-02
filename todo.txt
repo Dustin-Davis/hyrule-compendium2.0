@@ -1,0 +1,21 @@
+Hash routing
+
+add a card for monsters
+
+add styling to the moster cards
+
+add a card for creature
+
+add styling  for creature cards
+
+add card for Materials
+
+add styling to Materials card
+
+add card for Treasure
+
+add styling to Treasure card
+
+Add pagination
+
+add filtering by location or sorting by attack/defense
