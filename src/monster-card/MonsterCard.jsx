@@ -12,6 +12,7 @@ export default function MonsterCard() {
   return (
     <div className="container">
       <div className="row">
+        <a href="#">Equip</a>
         {
           monster.sort((a, b) => a.id - b.id)
             .map((item, idx) => idx < num && (
