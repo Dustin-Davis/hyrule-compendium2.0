@@ -7,7 +7,7 @@ import { useEquipment } from '../api.jsx'
 
 export default function EquipmentCard() {
   const equipment = useEquipment()
-  let num = 1
+  let num = 16
 
   return (
     <div className="container">
