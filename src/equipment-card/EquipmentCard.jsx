@@ -12,6 +12,7 @@ export default function EquipmentCard() {
   return (
     <div className="container">
       <div className="row">
+        <a href='#monster'>monster</a>
       {
         equipment.sort((a, b) => a.id - b.id)
         .map((item, idx) => idx < num && (
