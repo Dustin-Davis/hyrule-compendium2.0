@@ -7,7 +7,7 @@ import { useMonsters } from '../api.jsx'
 
 export default function MonsterCard() {
   const monster = useMonsters()
-  let num = 16
+  let num = 18
 
   return (
     <>

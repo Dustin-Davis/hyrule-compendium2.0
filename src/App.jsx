@@ -35,7 +35,7 @@ export default class App extends React.Component {
   }
 
   render() {
-    const { user, route } = this.state;
+    const { route } = this.state;
     return (
         <>
           {this.renderPage()}
