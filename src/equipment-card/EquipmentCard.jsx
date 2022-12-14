@@ -1,5 +1,5 @@
 import React from "react";
-import './EquipmentCard.css'
+// import './EquipmentCard.css'
 import { useEquipment } from '../api.jsx'
 
 
@@ -22,7 +22,7 @@ export default function EquipmentCard() {
                 <div className="flip-card" tabIndex="0">
                   <div className="flip-card-inner">
                     <div className="flip-card-front">
-                      <img src={item.image} alt=""></img>
+                      <img src={item.image} alt="" className="img"></img>
                     </div>
                     <div className="flip-card-back">
                       <p>{item.name.replace(/(^\w{1})|(\s+\w{1})/g, letter => letter.toUpperCase())}</p>
