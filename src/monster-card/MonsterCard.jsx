@@ -7,11 +7,10 @@ import { useMonsters } from '../api.jsx'
 
 export default function MonsterCard() {
   const monster = useMonsters()
-  let num = 18
+  let num = 16
 
   return (
     <>
-      <a href="#">Equip</a>
       <div className="container">
         <div className="row">
           {
