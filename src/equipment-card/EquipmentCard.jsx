@@ -3,16 +3,12 @@ import React from "react";
 import { useEquipment } from '../api.jsx'
 
 
-
-
-
 export default function EquipmentCard() {
   const equipment = useEquipment()
-  let num = 18
+  let num = 16
 
   return (
     <>
-      <a href='#monster'>monster</a>
       <div className="container">
         <div className="row">
         {
