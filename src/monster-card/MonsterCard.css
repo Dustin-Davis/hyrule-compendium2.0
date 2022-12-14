@@ -71,3 +71,8 @@ body {
   z-index: 1;
   align-items: center;
 }
+
+.img {
+  width: 290px;
+  height: 280px;
+}
