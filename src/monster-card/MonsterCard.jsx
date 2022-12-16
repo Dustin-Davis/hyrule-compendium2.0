@@ -16,7 +16,7 @@ export default function MonsterCard() {
           {
             monster.sort((a, b) => a.id - b.id)
             .map((item, idx) => idx < num && (
-              <div key={item.id} className="column">
+              <div key={item.id} className="col-3">
                   <div className="flip-card" tabIndex="0">
                     <div className="flip-card-inner">
                       <div className="flip-card-front">
