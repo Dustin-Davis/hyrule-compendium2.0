@@ -4,7 +4,7 @@ import './App.css'
 import axios from "axios";
 import parseRoute from './lib/parse-route.js'
 import EquipmentCard from './equipment-card/EquipmentCard.jsx'
-import MonsterCard from './monster-card/MonsterCard.jsx';
+// import MonsterCard from './monster-card/MonsterCard.jsx';
 
 export default class App extends React.Component {
   constructor(props) {
@@ -25,9 +25,9 @@ export default class App extends React.Component {
     if (route.path === '') {
       return <EquipmentCard />;
     }
-    if (route.path === 'monster') {
-      return <MonsterCard />;
-    }
+    // if (route.path === 'monster') {
+    //   return <MonsterCard />;
+    // }
     // if (route.path === 'sign-up') {
     //   return <SignUp />;
     // }
