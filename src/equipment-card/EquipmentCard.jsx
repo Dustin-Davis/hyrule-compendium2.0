@@ -14,7 +14,7 @@ export default function EquipmentCard() {
             <div className="card Card"  key={item.id}>
               <img src={item.image} className="card-img-top" alt="..."></img>
               <div className="card-body">
-                <a href="#" className="btn btn-primary">Go somewhere</a>
+                <a href="#" className="btn btn-primary">Details</a>
               </div>
             </div>
           ))
