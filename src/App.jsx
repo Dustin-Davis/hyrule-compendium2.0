@@ -9,8 +9,8 @@ import MonsterCard from './monster-card/MonsterCard.jsx';
 export default function App() {
 
   return(
-    // <EquipmentCard />
-    <MonsterCard />
+    <EquipmentCard />
+    // <MonsterCard />
   )
 
 }
