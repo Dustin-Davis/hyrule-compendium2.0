@@ -12,9 +12,11 @@ export default function NavBar() {
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div className="navbar-nav">
             <a className="nav-link active" aria-current="page" href="#">Home</a>
-            <a className="nav-link" href="#">Features</a>
-            <a className="nav-link" href="#">Pricing</a>
-            <a className="nav-link disabled">Disabled</a>
+            <a className="nav-link" href="#">Equipment</a>
+            <a className="nav-link" href="#">Monsters</a>
+            <a className="nav-link" href="#">Creatures</a>
+            <a className="nav-link" href="#">Materials</a>
+            <a className="nav-link" href="#">Treasure</a>
           </div>
         </div>
       </div>
