@@ -10,8 +10,10 @@ import NavBar from './navbar/navbar.jsx';
 export default function App() {
 
   return(
+    <>
     <NavBar />
-    // <EquipmentCard />
-    // <MonsterCard />
+    <EquipmentCard />
+    {/* <MonsterCard /> */}
+    </>
   )
 }
