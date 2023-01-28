@@ -1,7 +1,11 @@
-.Card {
-  width: 18rem;
-}
-
 .background {
   background-color: white;
+}
+
+
+@media (min-width: 375px) and (max-width: 767px) {
+  .test {
+    align-items: center;
+    justify-content: center;
+  }
 }
