@@ -9,12 +9,12 @@ export default function EquipmentCard() {
   return (
     <>
       <div className="container py-5 text-center d-flex justify-content-around ">
-        <div className="row row-cols-3 test justify-content-around">
+        <div className="row row-cols-3 justify-content-around">
       {
         equipment.sort((a, b) => a.id - b.id)
           .map((item, idx) => idx < num && (
               <div className="card Card mb-3 mx-3 col"  key={item.id}>
-                <img src={item.image} className="card-img-top img-size" alt="..."></img>
+              <img src={item.image} className="card-img-top rounded mt-3" alt="..."></img>
                 <div className="card-body">
                   <a href="#" className="btn btn-primary">Details</a>
                 </div>
