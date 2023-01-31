@@ -2,7 +2,10 @@
   background-color: white;
 }
 
-
+.btn, .btn-primary {
+  background-color: #767676 !important;
+  border-color: #767676 !important;
+}
 
 
 @media (min-width: 375px) and (max-width: 767px) {
