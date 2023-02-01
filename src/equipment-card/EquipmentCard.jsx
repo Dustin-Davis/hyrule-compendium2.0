@@ -5,9 +5,8 @@ import "./EquipmentCard.css"
 export default function EquipmentCard() {
   const [showModal, setShowModal] = useState(false);
   const [selectedItem, setSelectedItem] = useState(null);
+  const [num, setNum] = useState(5);
   const equipment = useEquipment();
-
-  let num = 5;
 
   const handleCloseModal = () => {
     setShowModal(false);
@@ -20,8 +19,20 @@ export default function EquipmentCard() {
     setShowModal(true);
   };
 
+  const handleNumChange = (event) => {
+    setNum(event.target.value);
+  };
+
   return (
     <>
+      <div className="text-center">
+        <label htmlFor="num-select">Number of items to display:</label>
+        <select id="num-select" value={num} onChange={handleNumChange}>
+          <option value={5}>5</option>
+          <option value={10}>10</option>
+          <option value={15}>15</option>
+        </select>
+      </div>
       <div className="container py-5 text-center d-flex justify-content-around">
         <div className="row row-cols-3 justify-content-around">
           {
