@@ -14,6 +14,12 @@ export default function EquipmentCard() {
     setSelectedItem(null);
   };
 
+  const handleClick = (item) => {
+    console.log("Button was clicked");
+    setSelectedItem(item);
+    setShowModal(true);
+  };
+
   return (
     <>
       <div className="container py-5 text-center d-flex justify-content-around">
@@ -25,7 +31,7 @@ export default function EquipmentCard() {
                 <div className="card Card mb-3 mx-3 col" key={item.id}>
                   <img src={item.image} className="card-img-top rounded mt-3" alt="..." />
                   <div className="card-body">
-                    <button className="btn btn-primary" onClick={() => setSelectedItem(item) && setShowModal(true)}>Details</button>
+                    <button className="btn btn-primary" onClick={() => handleClick(item)}>Details</button>
                   </div>
                 </div>
               ))
