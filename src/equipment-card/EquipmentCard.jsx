@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useEquipment } from '../api.jsx'
+import { useMonsters } from '../api.jsx'
 import "./EquipmentCard.css"
 
 export default function EquipmentCard() {
@@ -35,7 +36,7 @@ export default function EquipmentCard() {
         </select>
       </div>
       <div className="container py-5 text-center d-flex justify-content-around">
-        <div className="row row-cols-3 justify-content-around">
+        <div className="row row-cols-5 justify-content-around">
           {
             equipment
               .sort((a, b) => a.id - b.id)
