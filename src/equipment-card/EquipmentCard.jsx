@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useEquipment } from '../api.jsx'
+import { useMonsters } from '../api.jsx'
 import "./EquipmentCard.css"
 
 export default function EquipmentCard() {
