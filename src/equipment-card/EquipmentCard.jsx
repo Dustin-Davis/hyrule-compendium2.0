@@ -35,7 +35,7 @@ export default function EquipmentCard() {
         </select>
       </div>
       <div className="container py-5 text-center d-flex justify-content-around">
-        <div className="row row-cols-3 justify-content-around">
+        <div className="row row-cols-5 justify-content-around">
           {
             equipment
               .sort((a, b) => a.id - b.id)
