@@ -41,5 +41,24 @@ function useMonsters() {
   return monsters
 }
 
+const fetchMaterials = () => {
+  return axios.get(`https://botw-compendium.herokuapp.com/api/v2/category/materials`)
+    .then(({ data }) => {
+      console.log('Materials Data:', data)
+      return data
+    })
+}
 
-export {useEquipment, useMonsters}
+function useMaterials() {
+  const [Materials, setMaterials] = useState([])
+
+  useEffect(() => {
+    fetchMaterials().then((materials) => {
+      setMaterials(materials.data)
+    })
+  }, [])
+
+  return materials
+}
+
+export { useEquipment, useMonsters, useMaterials }
