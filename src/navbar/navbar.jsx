@@ -16,7 +16,7 @@ export default function NavBar() {
             <Link to='/equipment' className="nav-link">Equipment</Link>
             <Link to='/monster' className="nav-link">Monster</Link>
             <a className="nav-link" href="#">Creatures</a>
-            <a className="nav-link" href="#">Materials</a>
+            <Link to='/Materials' className="nav-link">Materials</Link>
             <a className="nav-link" href="#">Treasure</a>
           </div>
         </div>
