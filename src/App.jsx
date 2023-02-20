@@ -5,6 +5,7 @@ import './App.css'
 import axios from "axios"
 import EquipmentCard from './equipment-card/EquipmentCard.jsx'
 import MonsterCard from './monster-card/MonsterCard.jsx';
+import MaterialsCard from './material-card/MaterialCard.jsx'
 import NavBar from './navbar/navbar.jsx';
 import Home from './Home/Home.jsx';
 

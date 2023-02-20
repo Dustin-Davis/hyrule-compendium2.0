@@ -58,7 +58,7 @@ function useMaterials() {
     })
   }, [])
 
-  return materials
+  return Materials
 }
 
 export { useEquipment, useMonsters, useMaterials }
