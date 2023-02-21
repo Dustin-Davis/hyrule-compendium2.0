@@ -61,4 +61,24 @@ function useMaterials() {
   return Materials
 }
 
-export { useEquipment, useMonsters, useMaterials }
+const fetchCreatures = () => {
+  return axios.get(`https://botw-compendium.herokuapp.com/api/v2/category/creatures`)
+    .then(({ data }) => {
+      console.log('Creatures Data:', data)
+      return data
+    })
+}
+function useCreatures() {
+  const [Creatures, setCreatures] = useState([])
+
+  useEffect(() => {
+    fetchCreatures().then((creatures) => {
+      setCreatures(creatures.data.food.concat(creatures.data.non_food))
+    })
+  }, [])
+
+  return Creatures
+}
+
+
+export { useEquipment, useMonsters, useMaterials, useCreatures }
