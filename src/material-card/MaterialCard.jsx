@@ -32,7 +32,6 @@ export default function EquipmentCard() {
         <select id="num-select" value={num} onChange={handleNumChange}>
           <option value={16}>16</option>
           <option value={32}>32</option>
-          <option value={128}>128</option>
           <option value={materials.length}>All</option>
         </select>
       </div>
