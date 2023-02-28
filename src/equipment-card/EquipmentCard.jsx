@@ -36,12 +36,12 @@ export default function EquipmentCard() {
         </select>
       </div>
       <div className="container py-5 text-center d-flex justify-content-around">
-        <div className="row row-cols-5 justify-content-around">
+        <div className="row row-cols-xl-5 row-cols-lg-4 row-cols-md-4 row-cols-sm-3 row-cols-2 test justify-content-around ">
           {
             equipment
               .sort((a, b) => a.id - b.id)
               .map((item, idx) => idx < num && (
-                <div className="card Card mb-3 mx-3 col" key={item.id}>
+                <div className="card Card mb-3 mx-3" key={item.id}>
                   <img src={item.image} className="card-img-top rounded mt-3" alt="..." />
                   <div className="card-body">
                     <button className="btn btn-primary" onClick={() => handleClick(item)}>Details</button>
