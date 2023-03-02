@@ -12,12 +12,16 @@ export default function EquipmentCard() {
   const handleCloseModal = () => {
     setShowModal(false);
     setSelectedItem(null);
+    document.body.style.overflow = 'unset';
   };
 
   const handleClick = (item) => {
     console.log("Button was clicked");
     setSelectedItem(item);
     setShowModal(true);
+    if (typeof window != 'undefined' && window.document) {
+      document.body.style.overflow = 'hidden';
+    }
   };
 
   const handleNumChange = (event) => {
@@ -57,7 +61,7 @@ export default function EquipmentCard() {
             <div className="modal-content">
               <div className="modal-header">
                 <h3>{selectedItem.name}</h3>
-                <button className="btn btn-close" onClick={handleCloseModal}>x</button>
+                <button className="btn btn-close" onClick={handleCloseModal}></button>
               </div>
               <div className="modal-body">
                 <p>Category: {selectedItem.category}</p>
