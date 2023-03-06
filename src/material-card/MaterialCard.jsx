@@ -13,12 +13,17 @@ export default function EquipmentCard() {
   const handleCloseModal = () => {
     setShowModal(false);
     setSelectedItem(null);
+    document.body.style.overflow = 'unset';
   };
 
   const handleClick = (item) => {
     console.log("Button was clicked");
     setSelectedItem(item);
     setShowModal(true);
+
+    if (typeof window != 'undefined' && window.document) {
+      document.body.style.overflow = 'hidden';
+    }
   };
 
   const handleNumChange = (event) => {
