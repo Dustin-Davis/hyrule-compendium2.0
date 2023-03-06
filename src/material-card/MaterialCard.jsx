@@ -13,12 +13,17 @@ export default function EquipmentCard() {
   const handleCloseModal = () => {
     setShowModal(false);
     setSelectedItem(null);
+    document.body.style.overflow = 'unset';
   };
 
   const handleClick = (item) => {
     console.log("Button was clicked");
     setSelectedItem(item);
     setShowModal(true);
+
+    if (typeof window != 'undefined' && window.document) {
+      document.body.style.overflow = 'hidden';
+    }
   };
 
   const handleNumChange = (event) => {
@@ -36,7 +41,7 @@ export default function EquipmentCard() {
         </select>
       </div>
       <div className="container py-5 text-center d-flex justify-content-around">
-        <div className="row row-cols-5 justify-content-around">
+        <div className="row row-cols-xl-5 row-cols-lg-4 row-cols-md-4 row-cols-sm-3 row-cols-2 test justify-content-around">
           {
             materials
               .sort((a, b) => a.id - b.id)
