@@ -47,6 +47,9 @@
   cursor: pointer;
 }
 
+.txt-color {
+  color: black;
+}
 
 @media (min-width: 375px) and (max-width: 767px) {
   .test {
