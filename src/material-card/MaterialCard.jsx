@@ -4,7 +4,7 @@ import { useMonsters } from '../api.jsx'
 import "../equipment-card/EquipmentCard.css"
 
 
-export default function EquipmentCard() {
+export default function MaterialCard() {
   const [showModal, setShowModal] = useState(false);
   const [selectedItem, setSelectedItem] = useState(null);
   const [num, setNum] = useState(16);
@@ -47,6 +47,7 @@ export default function EquipmentCard() {
               .sort((a, b) => a.id - b.id)
               .map((item, idx) => idx < num && (
                 <div className="card Card mb-3 mx-3 col" key={item.id}>
+                  <div className="txt-color">{item.name.split(' ').map((word) => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')}</div>
                   <img src={item.image} className="card-img-top rounded mt-3" alt="..." />
                   <div className="card-body">
                     <button className="btn btn-primary" onClick={() => handleClick(item)}>Details</button>
@@ -61,15 +62,15 @@ export default function EquipmentCard() {
           <div className="modal-backdrop">
             <div className="modal-content">
               <div className="modal-header">
-                <h3>{selectedItem.name}</h3>
-                <button className="btn btn-close" onClick={handleCloseModal}>x</button>
+                <h3>{selectedItem.name.split(' ').map((word) => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')}</h3>
+                <button className="btn btn-close" onClick={handleCloseModal}></button>
               </div>
               <div className="modal-body">
                 <p>Category: {selectedItem.category}</p>
                 <p>{selectedItem.description}</p>
                 <p>Common Location: {selectedItem.common_locations}</p>
-                <p>Attack: {selectedItem.attack}</p>
-                <p>Durability: {selectedItem.durability}</p>
+                <p>Hearts Recovered: {selectedItem.hearts_recovered}</p>
+                <p>Cooking Effect: {selectedItem.cooking_effect}</p>
               </div>
             </div>
           </div>
