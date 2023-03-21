@@ -46,6 +46,7 @@ export default function EquipmentCard() {
               .sort((a, b) => a.id - b.id)
               .map((item, idx) => idx < num && (
                 <div className="card Card mb-3 mx-3" key={item.id}>
+                  <div className="txt-color">{item.name.split(' ').map((word) => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')}</div>
                   <img src={item.image} className="card-img-top rounded mt-3" alt="..." />
                   <div className="card-body">
                     <button className="btn btn-primary" onClick={() => handleClick(item)}>Details</button>
@@ -60,7 +61,7 @@ export default function EquipmentCard() {
           <div className="modal-backdrop">
             <div className="modal-content">
               <div className="modal-header">
-                <h3>{selectedItem.name}</h3>
+                <h3>{selectedItem.name.split(' ').map((word) => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')}</h3>
                 <button className="btn btn-close" onClick={handleCloseModal}></button>
               </div>
               <div className="modal-body">
