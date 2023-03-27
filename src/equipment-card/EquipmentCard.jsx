@@ -65,7 +65,7 @@ export default function EquipmentCard() {
                 <button className="btn btn-close" onClick={handleCloseModal}></button>
               </div>
               <div className="modal-body">
-                <p>Category: {selectedItem.category}</p>
+                <p>Category: {selectedItem.category.split(' ').map((word) => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')}</p>
                 <p>{selectedItem.description}</p>
                 <p>Common Location: {selectedItem.common_locations}</p>
                 <p>Attack: {selectedItem.attack}</p>
