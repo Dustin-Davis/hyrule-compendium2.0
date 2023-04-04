@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useMaterials } from '../api.jsx'
 import { useMonsters } from '../api.jsx'
 import "../equipment-card/EquipmentCard.css"
+import capitalizeFirstLetters from "../capitalize.jsx";
 
 
 export default function MaterialCard() {
@@ -47,7 +48,7 @@ export default function MaterialCard() {
               .sort((a, b) => a.id - b.id)
               .map((item, idx) => idx < num && (
                 <div className="card Card mb-3 mx-3 col" key={item.id}>
-                  <div className="txt-color">{item.name.split(' ').map((word) => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')}</div>
+                  <div className="txt-color">{capitalizeFirstLetters(item.name)}</div>
                   <img src={item.image} className="card-img-top rounded mt-3" alt="..." />
                   <div className="card-body">
                     <button className="btn btn-primary" onClick={() => handleClick(item)}>Details</button>
@@ -62,11 +63,11 @@ export default function MaterialCard() {
           <div className="modal-backdrop">
             <div className="modal-content">
               <div className="modal-header">
-                <h3>{selectedItem.name.split(' ').map((word) => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')}</h3>
+                <h3>{capitalizeFirstLetters(selectedItem.name)}</h3>
                 <button className="btn btn-close" onClick={handleCloseModal}></button>
               </div>
               <div className="modal-body">
-                <p>Category: {selectedItem.category}</p>
+                <p>Category: {capitalizeFirstLetters(selectedItem.category)}</p>
                 <p>{selectedItem.description}</p>
                 <p>Common Location: {selectedItem.common_locations}</p>
                 <p>Hearts Recovered: {selectedItem.hearts_recovered}</p>
