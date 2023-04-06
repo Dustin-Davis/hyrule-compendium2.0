@@ -48,7 +48,7 @@ export default function MaterialCard() {
               .sort((a, b) => a.id - b.id)
               .map((item, idx) => idx < num && (
                 <div className="card Card mb-3 mx-3 col" key={item.id}>
-                  <div className="txt-color">{capitalizeFirstLetters(item.name)}</div>
+                  <div className="txt-color mt-2">{capitalizeFirstLetters(item.name)}</div>
                   <img src={item.image} className="card-img-top rounded mt-3" alt="..." />
                   <div className="card-body">
                     <button className="btn btn-primary" onClick={() => handleClick(item)}>Details</button>
